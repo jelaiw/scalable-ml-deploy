@@ -19,7 +19,10 @@ def picrunch(ndigits):
 
 	# Insert the decimal point after the first digit '3'.
 	text = str(pi)
-	return text[0] + "." + text[1:]
+	return {
+		'pi': text[0] + "." + text[1:],
+		'ndigits': ndigits,
+	}
 
 def ArctanDenom(d, ndigits):
 	# Calculates arctan(1/d) = 1/d - 1/(3*d^3) + 1/(5*d^5) - 1/(7*d^7) + ...
