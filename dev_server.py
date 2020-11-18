@@ -1,13 +1,18 @@
 from flask import Flask
+from flask import request
 app = Flask(__name__)
 
-@app.route('/api/v0/picrunch/<int:ndigits>')
-#   This is picrunch.py by Don Cross with minor adaptation to REST API.
+@app.route('/api/v0/pi')
+#   Implement picrunch algorithm described by Don Cross as a REST API.
 #
 #   Use Machin's Formula
 #   pi = 4*(4*arctan(1/5) - arctan(1/239))
 #   to calculate pi to ndigit places after the decimal.
-def picrunch(ndigits):
+def picrunch():
+	# See https://flask.palletsprojects.com/en/1.1.x/quickstart/#the-request-object.
+	# Default to ndigits of 22.
+	# See https://werkzeug.palletsprojects.com/en/1.0.x/datastructures/#werkzeug.datastructures.MultiDict.
+	ndigits = request.args.get('ndigits', default=22, type=int)
 	xdigits = 10             # Extra digits to reduce trailing error
 
 	# Use Machin's Formula to calculate pi.
