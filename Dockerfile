@@ -19,4 +19,7 @@ COPY requirements.txt $APPROOT
 # Install Flask (peg to versions in requirements.txt).
 RUN pip3 install -r requirements.txt
 
-ENTRYPOINT ["flask", "run"]
+# Expose Flask on port 80.
+EXPOSE 80
+
+ENTRYPOINT ["flask", "run", "-h", "0.0.0.0", "-p", "80"]
