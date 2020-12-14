@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: picrunch
+spec:
+  selector:
+    matchLabels:
+      app: picrunch
+  replicas: 1 # tells deployment to run 1 pods matching the template
+  template: # create pods using pod definition in this template
+    metadata:
+      labels:
+        app: picrunch
+    spec:
+      containers:
+      - name: picrunch
+        image: jelaiw/picrunch:0.2
+        ports:
+        - containerPort: 80
