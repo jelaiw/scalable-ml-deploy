@@ -1,3 +1,8 @@
+## Overview
+A quick, proof-of-concept implementation for the "Scalable ML Deploys for Data Science" design pattern described by Dan Sullivan (see References slide in `slides.pdf`).
+
+See slides for further background and context.
+
 ## *picrunch* Algorithm as a Service (REST API)
 Calculates pi to specified number of digits after the decimal.
 
