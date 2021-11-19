@@ -3,7 +3,7 @@ A quick, proof-of-concept implementation for the "Scalable ML Deploys for Data S
 
 See slides for further background and context.
 
-## *picrunch* Algorithm as a Service (REST API)
+## *picrunch* Algorithm Service (REST API)
 Calculates pi to specified number of digits after the decimal.
 
 Implements the *picrunch* algorithm by Don Cross. See https://medium.com/@cosinekitty/how-to-calculate-a-million-digits-of-pi-d62ce3db8f58 for further detail.
